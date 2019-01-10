@@ -26,12 +26,14 @@
 <meta name="twitter:title" content="Fanatic White">
 <meta name="twitter:description" content="Vow not to do technical white">
 
-<link rel="apple-touch-icon" href="//apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Fanatic White" type="application/atom+xml">
 
 
 
-
-    <link rel="shortcut icon" href="//favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
 
 
 
@@ -79,7 +81,7 @@
 
 
 
-    <script> yiliaConfig.rootUrl = /; </script>
+    <script> yiliaConfig.rootUrl = "\/";</script>
 
 
 
@@ -94,7 +96,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/Blog/" class="profilepic">
-            <img src="//img/avatar.gif" class="animated zoomIn">
+            <img src="/img/avatar.png" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/Blog/">LearnSlag</a></h1>
@@ -155,24 +157,24 @@
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a href="//Blog/">主页</a></li>
+                            <li><a href="/Blog/">主页</a></li>
                         
-                            <li><a href="//Blog/archives/">所有文章</a></li>
+                            <li><a href="/Blog/archives/">所有文章</a></li>
+                        
+                            <li><a href="/Blog/tags/">标签云</a></li>
+                        
+                            <li><a href="/Blog/about/">关于我</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="#" title="Email"></a>
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa 新浪微博" href="#" title="新浪微博"></a>
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
                             
-                                <a class="fa 知乎" href="#" title="知乎"></a>
-                            
-                                <a class="fa 网易云音乐" href="#" title="网易云音乐"></a>
-                            
-                                <a class="fa bilibili" href="#" title="bilibili"></a>
+                                <a class="fa RSS" href="/Blog/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -204,7 +206,7 @@
                 
                 <section class="switch-part switch-part4">
                 
-                    <div id="js-aboutme">一个渴望成为大牛的小小白</div>
+                    <div id="js-aboutme">专注于前端</div>
                 </section>
                 
             </div>
@@ -221,7 +223,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/Blog/" class="profilepic">
-                <img src="//img/avatar.gif" class="animated zoomIn">
+                <img src="/img/avatar.png" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/Blog/" title="回到主页">LearnSlag</a></h1>
@@ -236,21 +238,21 @@
                 
                     <li><a href="/Blog/archives/">所有文章</a></li>
                 
+                    <li><a href="/Blog/tags/">标签云</a></li>
+                
+                    <li><a href="/Blog/about/">关于我</a></li>
+                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="#" title="Email"></a>
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa 新浪微博" target="_blank" href="#" title="新浪微博"></a>
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
                             
-                                <a class="fa 知乎" target="_blank" href="#" title="知乎"></a>
-                            
-                                <a class="fa 网易云音乐" target="_blank" href="#" title="网易云音乐"></a>
-                            
-                                <a class="fa bilibili" target="_blank" href="#" title="bilibili"></a>
+                                <a class="fa RSS" target="_blank" href="/Blog/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
@@ -310,7 +312,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2019 LearnSlag
+                2016-2019 LearnSlag
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
@@ -351,7 +353,7 @@
             }
             else {
                 var backgroundnum = 5;
-                var backgroundimg = "url(//background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
         })
@@ -371,14 +373,14 @@
     
         var oOpenInNew = {
             
-             title: "a.article-title, .article-more-link a", 
+            
             
             
             
             
              archives: ".archive-article-title", 
              miniArchives: "a.post-list-link", 
-             menu: ".header-menu a", 
+            
              friends: "#js-friends a", 
              socail: ".social a" 
         }
