@@ -284,6 +284,265 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.learnslag.com/2019/02/16/基于决策树和搜索的智能系统/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LearnSlag">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fanatic White">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/16/基于决策树和搜索的智能系统/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-16T00:00:00+08:00">
+                2019-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/决策树/" itemprop="url" rel="index">
+                    <span itemprop="name">决策树</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/决策树/人工智能/" itemprop="url" rel="index">
+                    <span itemprop="name">人工智能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="实例1：读心术（猜数字游戏）"><a href="#实例1：读心术（猜数字游戏）" class="headerlink" title="实例1：读心术（猜数字游戏）"></a>实例1：读心术（猜数字游戏）</h2><blockquote>
+<p>经典的猜数字AI：用户先随机在0-1000之间随意写一个数字，AI开始猜，如果猜的数打了，用户就说大了，反之，则说小了。<br>方法一：随心所欲猜<br>方法二：每次取中间的数</p>
+</blockquote>
+<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><blockquote>
+<p>从中间的数开始，如果猜中则结束；<br>如果结果大于或者小于中间的数，则在剩下大于或小于中间的数的那一半中查找；<br>每一次比较都使搜索范围缩小一半</p>
+</blockquote>
+<h4 id="判定树"><a href="#判定树" class="headerlink" title="判定树"></a>判定树</h4><blockquote>
+<p>二分查找的过程可以用二叉树来形容描述：把当前查找区间的中间位置上的结点作为根，左子表和右子表中的结点分别作为根节点的左子树和右子树。由此得到的二叉树，称为描述二分查找树的判定树（Decision Tree）或比较树（Comprision Tree）<br>时间复杂度为O(logN)<br>判定树的形态只与表结点个数N有关，与具体的数值无关</p>
+</blockquote>
+<h4 id="二分查找应用：计算平方根"><a href="#二分查找应用：计算平方根" class="headerlink" title="二分查找应用：计算平方根"></a>二分查找应用：计算平方根</h4><blockquote>
+<p>从被开方的数的1/2开始，每次进行平方校验，同时更新当前的取值上限和下限，以当前取值上限和下限的平均值作为新的尝试值</p>
+</blockquote>
+<h3 id="基于规则的AI"><a href="#基于规则的AI" class="headerlink" title="基于规则的AI"></a>基于规则的AI</h3><blockquote>
+<p>根据简单的规则（二分查找）建立AI<br>在规则范围内，即使最简单的一个小程序也能够猜出你内心的想法</p>
+</blockquote>
+<h2 id="和人类一样的判断方式"><a href="#和人类一样的判断方式" class="headerlink" title="和人类一样的判断方式"></a>和人类一样的判断方式</h2><h3 id="人类判断"><a href="#人类判断" class="headerlink" title="人类判断"></a>人类判断</h3><blockquote>
+<p>人们对对客观事物的认识由认识个别的事物开始，进而认识事物的普遍规律<br>根据归纳推理等方式做出判断<br>确定性判断或不确定性的判断</p>
+</blockquote>
+<h3 id="基于规则的AI系统"><a href="#基于规则的AI系统" class="headerlink" title="基于规则的AI系统"></a>基于规则的AI系统</h3><blockquote>
+<p>最简单的形式是由一连串的if-then规则组成，用来进行推断或行动决策。</p>
+</blockquote>
+<h3 id="专家系统"><a href="#专家系统" class="headerlink" title="专家系统"></a>专家系统</h3><blockquote>
+<p>专家系统是一个具有智能特点的计算机程序，它的智能化主要表现为能够在特定的领域内模仿人类专家的思维来求解复杂问题。</p>
+</blockquote>
+<h4 id="专家系统组成"><a href="#专家系统组成" class="headerlink" title="专家系统组成"></a>专家系统组成</h4><ul>
+<li>知识库<blockquote>
+<p>必须为专家系统提供“知识”，人类专家将他们的知识编入系统。</p>
+</blockquote>
+</li>
+<li>推理引擎<blockquote>
+<p>根据用户提供的事实，选择引用哪些规则来尝试解决用户的问题。</p>
+</blockquote>
+</li>
+<li>用户接口<blockquote>
+<p>以可读的形式接收用户的查询并将其传递给接口引擎，最后将结果显示给用户。</p>
+</blockquote>
+<h4 id="专家系统的适用领域"><a href="#专家系统的适用领域" class="headerlink" title="专家系统的适用领域"></a>专家系统的适用领域</h4></li>
+<li>不需要额外常识</li>
+<li>输入的数据可以客观描述</li>
+<li>人类专家稀缺</li>
+<li>用户需求量大</li>
+</ul>
+<h2 id="专家系统的应用与发展"><a href="#专家系统的应用与发展" class="headerlink" title="专家系统的应用与发展"></a>专家系统的应用与发展</h2><h3 id="DENDRAL"><a href="#DENDRAL" class="headerlink" title="DENDRAL"></a>DENDRAL</h3><blockquote>
+<p>1965年在美国斯坦福大学开始研制，由工程师费根鲍姆和化学家李德伯格合作。<br>DENDRAL输入的是质谱仪的数据、费根鲍姆捕捉化学分析知识，把知识提炼成规则、输出给定物质的化学结构。</p>
+</blockquote>
+<h3 id="MYCIN"><a href="#MYCIN" class="headerlink" title="MYCIN"></a>MYCIN</h3><blockquote>
+<p>1970年首次使用，用于诊断血液病的医疗系统，包含大约100中细菌感染原因的信息。<br>医生可以输入患者的症状，一般请装酷和病史，以及简单实验室测试的结果。<br>识别细菌感染是否确实存在以及导致感染的细菌类型。</p>
+</blockquote>
+<h3 id="Prospector"><a href="#Prospector" class="headerlink" title="Prospector"></a>Prospector</h3><blockquote>
+<p>1977年斯坦福研究中心的Duda研制，由地质专家用于识别钻井或含矿的区域。<br>矿物知识库、推理机（根据贝叶斯理论进行不确定性推理）</p>
+</blockquote>
+<h3 id="XCON——第一个特别成功的专家系统"><a href="#XCON——第一个特别成功的专家系统" class="headerlink" title="XCON——第一个特别成功的专家系统"></a>XCON——第一个特别成功的专家系统</h3><blockquote>
+<p>1980年被用于DEC位于新罕布什尔州萨利姆的工厂，按照用户需求，帮助DEC为VAX型计算机系统自动选择组件</p>
+</blockquote>
+<h3 id="知识表示"><a href="#知识表示" class="headerlink" title="知识表示"></a>知识表示</h3><blockquote>
+<p>如何将人类专家提供知识，映射并存储到知识库中，便于更好的进行推理<br>Google为了提升搜索引擎返回的答案质量和用户查询的效率，与2012年5月16日发布了知识图谱（Knowledge Graph）</p>
+</blockquote>
+<h4 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h4><blockquote>
+<p>把这种各样的事实和概念，通过边的关联形成一张巨大的知识网络。</p>
+</blockquote>
+<h3 id="专家系统发展"><a href="#专家系统发展" class="headerlink" title="专家系统发展"></a>专家系统发展</h3><blockquote>
+<p>知识库变大、推理引擎更加专用、用户接口更多样</p>
+</blockquote>
+<h2 id="实例2：井字棋"><a href="#实例2：井字棋" class="headerlink" title="实例2：井字棋"></a>实例2：井字棋</h2><blockquote>
+<p>井字棋（Tic-Tac-Toe）是由两个玩家轮流在3x3的格子上打自己的符号（圈或者叉），最先以横、直、斜连成一线则为胜。</p>
+</blockquote>
+<h3 id="第一款电子游戏"><a href="#第一款电子游戏" class="headerlink" title="第一款电子游戏"></a>第一款电子游戏</h3><blockquote>
+<p>1952年，英国的计算机科学家Alexander S.Douglas开发出了井字棋游戏《Noughts and Crosses》</p>
+</blockquote>
+<h4 id="局面简单化"><a href="#局面简单化" class="headerlink" title="局面简单化"></a>局面简单化</h4><blockquote>
+<p>考虑对称性，最终局面只有138种。</p>
+</blockquote>
+<h4 id="游戏策略"><a href="#游戏策略" class="headerlink" title="游戏策略"></a>游戏策略</h4><ul>
+<li>让自己获得胜利<blockquote>
+<p>当有两粒连子的时候，把它们练成三个</p>
+</blockquote>
+</li>
+<li>阻止对方获得胜利<blockquote>
+<p>如果对方有两粒连子，阻止它们构成3连</p>
+</blockquote>
+</li>
+<li>尽量创造出能够获胜的机会<blockquote>
+<p>争取同时有两个路径能够完成3个棋子连在一起，使得对方无法一次性封堵</p>
+</blockquote>
+</li>
+<li>阻止对方创造这样的机会<h4 id="如何决定下在哪里"><a href="#如何决定下在哪里" class="headerlink" title="如何决定下在哪里"></a>如何决定下在哪里</h4><blockquote>
+<p>AI学会下棋，可没有直觉的说法；在特定的局面下，AI会按照一定的规则给出固定的决定</p>
+</blockquote>
+<h3 id="博弈树"><a href="#博弈树" class="headerlink" title="博弈树"></a>博弈树</h3><h4 id="完全信息"><a href="#完全信息" class="headerlink" title="完全信息"></a>完全信息</h4><blockquote>
+<p>信息状态对所有人都是完全可见的</p>
+</blockquote>
+<h4 id="不完全信息"><a href="#不完全信息" class="headerlink" title="不完全信息"></a>不完全信息</h4><blockquote>
+<p>每个人有自己的私有信息，决策与要建立在对真实状态的猜测之上。</p>
+</blockquote>
+<h4 id="零和博弈"><a href="#零和博弈" class="headerlink" title="零和博弈"></a>零和博弈</h4><blockquote>
+<p>零和博弈中双方（或多方）的收益相加为0<br>只要让其他人的收益最小化，即可使自己的收益最大化</p>
+</blockquote>
+<h4 id="非零和博弈"><a href="#非零和博弈" class="headerlink" title="非零和博弈"></a>非零和博弈</h4><blockquote>
+<p>非零和博弈中，所有人的收益之和不为0，存在“合作”或者“双赢”的可能。<br>自己的所得并不与他人的损失的大小相等，使他人收益最小化也可能“损人不利己”。</p>
+</blockquote>
+<h3 id="博弈树构建"><a href="#博弈树构建" class="headerlink" title="博弈树构建"></a>博弈树构建</h3><blockquote>
+<p>博弈树的每一个节点对应于每一个局面，每一条边对应于一个动作<br>在完全信息和零和博弈的条件下，能够构建相对简单的博弈树<br>如果在不完全信息、非零和博弈的情况下，博弈树较为复杂</p>
+</blockquote>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+    <div>
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://blog.learnslag.com/2019/02/15/人工智能发展简史/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -714,7 +973,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -725,7 +984,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index-1.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -736,7 +995,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
